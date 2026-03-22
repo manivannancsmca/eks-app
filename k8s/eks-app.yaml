@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: eks-app-deployment
 spec:
-  replicas: 4
+  replicas: 2
   strategy:
     type: Recreate   # 🔥 Ensures old pod is killed before new one starts
   selector:
