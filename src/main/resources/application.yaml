@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: eks-app
+
+server:
+  port: 8082
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  health:
+    readinessState:
+      enabled: 'true'
+    livenessState:
+      enabled: 'true'
+  endpoint:
+    health:
+      probes:
+        enabled: 'true'
+    prometheus:
+      enabled: 'true'
+  prometheus:
+    metrics:
+      export:
+        enabled: 'true'
